@@ -1,0 +1,50 @@
+.smallImage{
+  width: 100%;
+  height: auto;
+}
+
+.banner{
+  background: #E6E6E6;
+}
+
+.banner h4{
+  color: #fff;
+  margin-top: -25px;
+}
+
+.banner p{
+  padding: 0;
+  margin: 0;
+}
+
+.mediumImagen{
+  width: 50%;
+  height: auto;
+}
+
+.miniImagen{
+  width: 10%;
+  height: auto;
+}
+
+#pFooter{
+  padding: 0 10px 0 10px;
+  font-weight: normal;
+}
+
+
+.typed {
+  font-size: 30%
+  border-bottom: 2px solid #ffffff;
+}
+
+.typed-cursor{
+   opacity: 1;
+   animation: blink 0.7s infinite;
+}
+
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}

@@ -1,0 +1,204 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="stylesheets/jquery.mobile-1.4.5.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/alternativas.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/estilo.css">
+  <script src="javascripts/jquery-2.1.4.min.js" ></script>
+  <script src="javascripts/jquery.mobile-1.4.5.js" ></script>
+  <script src='https://cdn.rawgit.com/mattboldt/typed.js/master/dist/typed.min.js'></script>
+
+</head>
+<body>
+
+
+  <div data-role="page" id="inicio">
+    <div data-role="header" data-theme="a" data-position="fixed">
+      <center>Alternativas y Oportunidades</center><br>
+      <div data-role="navbar">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#">Nosotros</a></li>
+          <li><a href="#login">Iniciar Sesion</a></li>
+        </ul>
+      </div><!-- /navbar -->
+    </div><!--/header-->
+
+    <div data-role="content" class="ui-content" data-theme="a" >
+      {{error}}
+      <div class="banner">
+        <img style="display: block;" class="smallImage" src="images/banner.png" />
+        <h4>Desarrollando Programas</h4>
+        <p>Formando personas de bien para el desarrollo sostenible de Honduras</p>
+      </div>
+      <div class="banner">
+        <img style="display: block;" class="smallImage" src="images/banner2.png" />
+        <h4>Apoya un Niño</h4>
+        <p>Tu puedes cambiar la vida de un niño apoyanos con tu Donativos </p>
+      </div>
+
+      <div id="programas" >
+      <center><h4>Nuestros Programas</h4></center>
+      <center><table>
+        <tr>
+          <td><center><img style="display: block;" class="mediumImagen" src="images/programas/Doctor-icon.png" />CONSULTA  MEDICA</center></td>
+          <td><center><img style="display: block;" class="mediumImagen" src="images/programas/escuela.png" />APOYO ESCOLAR</center></td>
+        </tr>
+        <tr>
+          <td><center><img style="display: block;" class="mediumImagen" src="images/programas/joven.png" />CLUB DE  JOVENES</center></td>
+          <td><center><img style="display: block;" class="mediumImagen" src="images/programas/padres.png" />ESCUELA PARA  PADRES</center></td>
+        </tr>
+      </table></center>
+
+      </div>
+    </div><!--content-->
+
+    <div data-role="footer" >
+      <br>
+      <center><img style="display: block;" class="miniImagen" src="images/footer.png" /></center>
+      <p id="pFooter" align="justify">AYO ayudando a niños y jovenes del mercado por medio de
+        Programas y proyectos que benefician su dessarrollo integral
+        como personas y Academico de futuros profesionales.</p>
+    </div><!-- /footer -->
+  </div><!--/index-->
+
+<!--**************************************************-->
+
+<div data-role="page" id="login">
+  <div data-role="header" data-theme="a" data-position="fixed">
+    <center>Alternativas y Oportunidades</center><br>
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#">Nosotros</a></li>
+        <li><a href="#login">Iniciar Sesion</a></li>
+      </ul>
+    </div><!-- /navbar -->
+  </div><!--/header-->
+
+<div data-role="content" class="ui-content" data-theme="a">
+       <form method="post" action="/api/obtenerUsuario" data-ajax="false">
+         <div>
+           <h3>Login information</h3>
+           <label for="usrnm" class="ui-hidden-accessible">Username:</label>
+           <input type="text" name="user" id="usrnm" placeholder="Username">
+           <label for="pswd" class="ui-hidden-accessible">Password:</label>
+           <input type="password" name="passw" id="pswd" placeholder="Password">
+           <input type="submit" data-inline="true" value="Log in">
+         </div>
+       </form>
+</div>
+
+<div data-role="footer" data-position="fixed" data-theme="a">
+    <h2>2016</h2>
+</div><!--footer-->
+</div><!--/loging-->
+
+<!--**************************************************-->
+
+<div data-role="page" id="pagPrincipal">
+  <div data-role="header" data-theme="a" data-position="fixed">
+    <center>Alternativas y Oportunidades</center><br>
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#inicio">Programas</a></li>
+        <li><a href="#donaciones" >Donaciones</a></li>
+        <li><a href="#inicio">Cerrar Sesion</a></li>
+      </ul>
+    </div><!-- /navbar -->
+  </div><!--/header-->
+
+<div data-role="content" class="ui-content" data-theme="a">
+  <center><h2>Gracias por tus Donaciones</h2></center>
+  <center><img style="display: block;" class="smallImage" src="images/banner3.png" /></center>
+  <center><h3><span id="typed" class="typed"></span></h3></center>
+</div>
+
+<div data-role="footer" data-position="fixed" data-theme="a">
+    <h2>2016</h2>
+</div><!--footer-->
+</div>
+
+<!--**************************************************-->
+
+<div data-role="page" id="donaciones">
+  <div data-role="header" data-theme="a" data-position="fixed">
+    <center>Alternativas y Oportunidades</center><br>
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#inicio">Programas</a></li>
+        <li><a href="#donaciones">Donaciones</a></li>
+        <li><a href="#inicio">Cerrar Sesion</a></li>
+      </ul>
+    </div><!-- /navbar -->
+  </div><!--/header-->
+
+<div data-role="content" class="ui-content" data-theme="a">
+  <center><h2>Nuestros Jovenes</h2></center>
+  <center>  <ul  data-role="listview" id="librosList" ></ul></center>
+</div>
+
+<div data-role="footer" data-position="fixed" data-theme="a">
+    <h2>2016</h2>
+</div><!--footer-->
+</div>
+
+<!--**************************************************-->
+
+<div data-role="page" id="donar">
+  <div data-role="header" data-theme="a" data-position="fixed">
+    <center>Alternativas y Oportunidades</center><br>
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#inicio">Programas</a></li>
+        <li><a href="#donaciones">Donaciones</a></li>
+        <li><a href="#inicio">Cerrar Sesion</a></li>
+      </ul>
+    </div><!-- /navbar -->
+  </div><!--/header-->
+
+<div data-role="content" class="ui-content" data-theme="a">
+  <center><h4>Seleccione el Monto a Donar</h4></center>
+  <form method="post" action="/api/mandarCant" data-ajax="false">
+    <div>
+      <label for="cantidad" class="ui-hidden-accessible">Cantidad:</label>
+      <input type="number" name="cantidad" id="cantidad" placeholder="Cantidad">
+      <input type="submit" data-inline="true" value="Donar">
+    </div>
+  </form>
+</div>
+
+<div data-role="footer" data-position="fixed" data-theme="a">
+    <h2>2016</h2>
+</div><!--footer-->
+</div>
+
+<!--**************************************************-->
+
+<div data-role="page" id="exitoso">
+  <div data-role="header" data-theme="a" data-position="fixed">
+    <center>Alternativas y Oportunidades</center><br>
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#inicio">Programas</a></li>
+        <li><a href="#donaciones">Donaciones</a></li>
+        <li><a href="#inicio">Cerrar Sesion</a></li>
+      </ul>
+    </div><!-- /navbar -->
+  </div><!--/header-->
+
+<div data-role="content" class="ui-content" data-theme="a">
+  <center><h4>Gracias por su Donacion</h4>
+  <a href="#donaciones" class="ui-btn ui-btn-inline">Realizar otra Donacion</a>
+  <a href="#inicio" class="ui-btn ui-btn-inline">Salir</a></center>
+</div>
+
+<div data-role="footer" data-position="fixed" data-theme="a">
+    <h2>2016</h2>
+</div><!--footer-->
+</div>
+
+<!--**************************************************-->
+
+<script src="javascripts/funcione.js" ></script>
+</doby>
